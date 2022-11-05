@@ -3,14 +3,19 @@
 #Valeria Vega Madrigal
 
 
+from turtle import delay
+import time
+
+ListaEmpleados=['Bryan','Valeria','Jafet','Anderson']
+
 i=0
 while i<3:
       usuario=input("ingrese su nombre de usuario :\n")
       i=i +1
-      if str(usuario)=="Bryan":
+      if str(usuario)=="a":
             print("USUARIO CORRECTO\n")
             clave=input("ingrese su clave\n")
-            if str(clave)=="1234":
+            if str(clave)=="a":
                   print("Bienvenido Bryan\n")
                   break
             else:
@@ -35,7 +40,7 @@ def menu():
           "6-Salir.\n")
 
     opcion = input("Escribe un número y pulsa enter: ")
-
+        
     if opcion == "1":
         
         def menu1():
@@ -44,13 +49,15 @@ def menu():
                 "1-Ver empleados actuales.\n",
                 "2-Modificar datos de empleados.\n",
                 "3-Ingresar nuevo empleado.\n",
-                "4-Salir.\n")
-
+                "4-Salir al menu principal.\n")
+                
             op1= input("Escribe un número y pulsa enter: ")
-            ListaEmpleados=['Bryan','Valeria','Jafet','Anderson']
             
             if op1=="1":
                 print("Los colaboradores actuales son los siguientes",ListaEmpleados)
+                print()
+                time.sleep(3)
+                return menu1()
 
 
             elif op1=="2":
@@ -68,9 +75,11 @@ def menu():
                 print("El nombre a agregar es el siguiente",AgregarEmpleado)
                 ListaEmpleados.append(AgregarEmpleado)
                 print(ListaEmpleados)
+                return menu1()
             
             elif op1=="4":
-                print("Salistes del programa satisfactoriamente")
+                print("Volviendo al menu principal")
+                return menu()
                 
 
         menu1()
