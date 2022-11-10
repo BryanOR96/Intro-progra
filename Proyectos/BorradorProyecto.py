@@ -217,13 +217,14 @@ def menu():
     elif opcion == "5":
         
         print("Modulo de Ventas")
+        time.sleep(2)
 
         def menu5():
 
             print("Elige una opción:\n\n",
-            "1-Ver .\n",
-            "2-Ver .\n",
-            "3-Ver .\n",
+            "1-Ingresar Ventas.\n",
+            "2-Consultar Ventas.\n",
+            "3-Ver lista de ventas.\n",
             "4-Salir al menu principal.\n")
 
         menu5()
@@ -235,17 +236,17 @@ def menu():
             if op5 == 1:
 
                 print("in progress")
-                return menu()
+                return menu5()
 
             elif op5 == 2:
 
                 print("in progress")
-                return menu()
+                return menu5()
 
             elif op5 == 3:
 
                 print("in progress")
-                return menu()
+                return menu5()
 
             elif op5 == 4:
                 print("Volviendo al menu principal")
