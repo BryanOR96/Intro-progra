@@ -1,6 +1,7 @@
 #Estudiantes
 #Bryan Orozco Rojas 
 #Valeria Vega Madrigal
+#Jafeth
 
 
 from turtle import delay
