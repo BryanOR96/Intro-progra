@@ -5,6 +5,7 @@
 
 from turtle import delay
 import time
+import numpy as np
 
 ListaEmpleados=['Bryan','Valeria','Jafet','Anderson']
 
@@ -67,6 +68,7 @@ def menu():
                 print("El nombre a agregar es el siguiente",AgregarEmpleado)
                 ListaEmpleados.append(AgregarEmpleado)
                 print(ListaEmpleados)
+                return menu1()
 
             elif op1=="3":
                 print(ListaEmpleados)
