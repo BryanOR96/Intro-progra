@@ -12,7 +12,7 @@ ListaClientes=['Maria Araya','Daniela Blanco','Ronaldo Arias']
 CedulasClientes=['Maria Araya > 117910384','Daniela Blanco > 117910384','Ronaldo Arias > 117910384']
 NumerosClientes=['Maria Araya > 88888888','Daniela Blanco > 88776655','Ronaldo Arias > 88990099']
 NumerosClientes=['Maria Araya > Alajuela','Daniela Blanco > Heredia','Ronaldo Arias > Limon']
-
+Destino = None
 print("Bievenido a la agencia de Viajes los Patitos Voladores")
 i=0
 while i<3:
@@ -229,14 +229,38 @@ def menu():
 
         menu5()
         
-        op5= int(input("Escribe un número y pulsa enter: "))
+        op5 = int(input("Escribe un número y pulsa enter: "))
 
         while op5 != 0:
 
             if op5 == 1:
+                def menuventas():
 
-                print("in progress")
-                return menu5()
+                    print("Elige una opción para facturar:\n\n",
+                    "1-Destino.\n",
+                    "2-Vuelos.\n",
+                    "3-Viejaes en bus.\n",
+                    "4-Lugares de estadia.\n",
+                    "5-Salir al menu principal.\n")
+                menuventas()
+
+                opventa= int(input("Escribe un número y pulsa enter: "))
+                    
+                while opventa != 0:
+                    if opventa == 1:
+                      Destino= (input("Escribe el nombre del destino al que desea viajar y pulsa enter: "))
+                      print("El destino escogido es: ",Destino)
+                      return menu5()
+
+                    elif opventa== 2:
+                        print("")
+                    elif opventa== 3:
+                        print("hola")
+                    elif opventa== 4:
+                        print("hola")
+                    elif opventa== 5:
+                     print("Volviendo al menu")
+                     return menu5()
 
             elif op5 == 2:
 
