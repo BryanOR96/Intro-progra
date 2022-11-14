@@ -64,15 +64,20 @@ def menu():
         while op1 != 0:
             
             if op1=="1":
-                print("Los colaboradores actuales son los siguientes",ListaEmpleados)
-                print()
+                print("Los colaboradores actuales son los siguientes\n")
+                for x in ListaEmpleados:
+                    print (x)
                 time.sleep(3)
                 return menu1()
 
 
             elif op1=="2":
-                for x in (ListaEmpleados,ListaClientes):
-                    print(x)
+                NomEmpleado=input(" Digite el nombre del empleado al que desea modificar los datos: ")
+                if NomEmpleado in ListaEmpleados:
+                    print("Los datos del empleado",NomEmpleado,"Son los siguientes:")
+
+                else:
+                    print("El nombre digitado no se encuentra en la base de datos ")
                 
                 return menu1()
 
