@@ -8,6 +8,9 @@ import time
 #import numpy as np
 
 ListaEmpleados=['Bryan','Valeria','Jafet','Anderson']
+ListaCedula=[304920966,128376533,4653912873,652730165]
+Salario=[2000,1500,1000,850]
+Puesto=['Presidente','Vicepresidenta','tesorero','Recepcionista']
 
 i=0
 while i<3:
@@ -60,7 +63,7 @@ def menu():
                 for x in ListaEmpleados:
                     print (x)
                 print()
-                time.sleep(3)
+                time.sleep(2)
                 return menu1()
 
 
@@ -76,13 +79,26 @@ def menu():
                 return menu1()
 
             elif op1=="3":
-                print(ListaEmpleados)
-                print(" Digite el nombre que desea Agregar")
-                AgregarEmpleado=input()
-                print("El nombre a agregar es el siguiente",AgregarEmpleado)
+                
+                AgregarEmpleado=input(print(" Digite el nombre del colaborador que desea Agregar a la lista"))
+                
+                
+                Cedula=input(print("Digite el numero de cedula"))
+                
+                hora=input(print("Digite el salario por hora que ganara",AgregarEmpleado))
+                
+                trabajo=input(print("Ingrese el puesto que tendra ",AgregarEmpleado))
+                
                 ListaEmpleados.append(AgregarEmpleado)
-                print(ListaEmpleados)
+                ListaCedula.append(Cedula)
+                Salario.append(hora)
+                Puesto.append(trabajo)
+                print("El Colaborador",AgregarEmpleado,"con la cedula",Cedula," ganara un salario de ",hora, "por hora, en el puesto de ",Puesto, " ha sido agregado con exito")
+                
+                for valor_a, valor_b, valor_c, valor_d in zip(ListaEmpleados, ListaCedula, Salario, Puesto): 
+	                print("Empleado: ",valor_a, "Cedula de identidad :",valor_b, "con salario de ",valor_c, " colones por hora en el puesto de: ,",valor_d, "ha sido agregado con exito ")
                 return menu1()
+                
             
             elif op1=="4":
                 print("Volviendo al menu principal")

@@ -8,11 +8,11 @@ from turtle import delay
 import time
 
 ListaEmpleados=['Bryan','Valeria','Jafet','Anderson']
-ListaClientes=['Maria Araya','Daniela Blanco','Ronaldo Arias']
-CedulasClientes=['Maria Araya > 117910384','Daniela Blanco > 117910384','Ronaldo Arias > 117910384']
-NumerosClientes=['Maria Araya > 88888888','Daniela Blanco > 88776655','Ronaldo Arias > 88990099']
-NumerosClientes=['Maria Araya > Alajuela','Daniela Blanco > Heredia','Ronaldo Arias > Limon']
-Destino = None
+ListaCedula=[304920966,128376533,4653912873,652730165]
+Salario=[2000,1500,1000,850]
+Puesto=['Presidente','Vicepresidenta','tesorero','Recepcionista']
+ListaClientes=[]
+
 print("Bievenido a la agencia de Viajes los Patitos Voladores")
 i=0
 while i<3:
@@ -80,14 +80,25 @@ def menu():
                 return menu1()
 
             elif op1=="3":
-                print(ListaEmpleados)
-                print(" Digite el nombre que desea Agregar")
-                AgregarEmpleado=input()
-                print("El nombre a agregar es el siguiente",AgregarEmpleado)
+                AgregarEmpleado=input(print(" Digite el nombre del colaborador que desea Agregar a la lista"))
+                
+                
+                Cedula=input(print("Digite el numero de cedula"))
+                
+                hora=input(print("Digite el salario por hora que ganara",AgregarEmpleado))
+                
+                trabajo=input(print("Ingrese el puesto que tendra ",AgregarEmpleado))
+                
                 ListaEmpleados.append(AgregarEmpleado)
-                print(ListaEmpleados)
-
-                return menu1()
+                ListaCedula.append(Cedula)
+                Salario.append(hora)
+                Puesto.append(trabajo)
+                print("El Colaborador",AgregarEmpleado,"con la cedula",Cedula," ganara un salario de ",hora, "por hora, en el puesto de ",Puesto, " ha sido agregado con exito")
+                
+                for valor_a, valor_b, valor_c, valor_d in zip(ListaEmpleados, ListaCedula, Salario, Puesto): 
+	                print("Empleado: ",valor_a, "Cedula de identidad :",valor_b, "con salario de ",valor_c, " colones por hora en el puesto de:",valor_d, "ha sido agregado con exito ")
+                  
+                return menu1
             
             elif op1=="4":
                 print("Volviendo al menu principal")
@@ -101,7 +112,7 @@ def menu():
         def menu2():
 
             print("Elige una opción:\n\n",
-                "1-Ver clientes registados.\n",
+                "1-Ver clientes registrados.\n",
                 "2-Ingresar nuevo Cliente.\n",
                 "3-Salir al menu principal.\n")
             op2= int(input("Escribe un número y pulsa enter: "))
@@ -110,7 +121,7 @@ def menu():
             if op2 == 1:
 
              print("Los clientes actuales son los siguientes")
-             print(ListaClientes)
+             print()
              return menu2()
 
             elif op2== 2:
@@ -121,12 +132,12 @@ def menu():
                 print("El nombre a agregar es el siguiente",AgregarCliente)
                 ListaClientes.append(AgregarCliente)
                 print(ListaClientes)
-                print(CedulasClientes)
+                print()
                 print(" Digite el nombre de la cedula del cliente que desea Agregar: ")
                 AgregarCedulaCliente=input()
                 print("La Cedula a agregar es el siguiente",AgregarCedulaCliente)
-                CedulasClientes.append(AgregarCliente)
-                print(CedulasClientes)
+                #CedulasClientes.append(AgregarCliente)
+                #print(CedulasClientes)
                 return menu()
                 
             elif op2== 3:
