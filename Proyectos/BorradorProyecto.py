@@ -44,7 +44,8 @@ def menu():
           "6-Salir.\n")
 
     opcion = input("Escribe un número y pulsa enter: \n")
-        
+    
+
     if opcion == "1":
 
         print("Modulo de Empleados!\n")
@@ -56,18 +57,15 @@ def menu():
                 "2-Modificar datos de empleados.\n",
                 "3-Ingresar nuevo empleado.\n",
                 "4-Salir al menu principal.\n")
-
-        menu1()
+            op1= input("Escribe un número y pulsa enter: ")
             
-        op1= input("Escribe un número y pulsa enter: ")
-
-        while op1 != 0:
             
             if op1=="1":
                 print("Los colaboradores actuales son los siguientes\n")
                 for x in ListaEmpleados:
                     print (x)
                 time.sleep(3)
+            
                 return menu1()
 
 
@@ -88,35 +86,32 @@ def menu():
                 print("El nombre a agregar es el siguiente",AgregarEmpleado)
                 ListaEmpleados.append(AgregarEmpleado)
                 print(ListaEmpleados)
+
                 return menu1()
             
             elif op1=="4":
                 print("Volviendo al menu principal")
                 return menu()
-
+        menu1()
 
     elif opcion == "2":
         
         print("Modulo de Clientes!\n")
-
+        
         def menu2():
 
             print("Elige una opción:\n\n",
-            "1-Ver clientes registados.\n",
-            "2-Ingresar nuevo Cliente.\n",
-            "3-Salir al menu principal.\n")
-
-        menu2()
+                "1-Ver clientes registados.\n",
+                "2-Ingresar nuevo Cliente.\n",
+                "3-Salir al menu principal.\n")
+            op2= int(input("Escribe un número y pulsa enter: "))
+         
         
-        op2= int(input("Escribe un número y pulsa enter: "))
-
-        while op2 != 0:
-
             if op2 == 1:
 
-                print("Los clientes actuales son los siguientes")
-                print(ListaClientes)
-                return menu2()
+             print("Los clientes actuales son los siguientes")
+             print(ListaClientes)
+             return menu2()
 
             elif op2== 2:
 
@@ -137,7 +132,7 @@ def menu():
             elif op2== 3:
                 print("Volviendo al menu principal")
                 return menu()
-
+        menu2()
             
                 
     elif opcion == "3":
@@ -147,39 +142,35 @@ def menu():
         def menu3():
 
             print("Elige una opción:\n\n",
-            "1-Ver provedores de la empresa.\n",
-            "2-Ver desinos transporte aereo.\n",
-            "3-Ver destinos transporte terrestre.\n",
-            "4-Salir al menu principal.\n")
-
-        menu3()
+                "1-Ver provedores de la empresa.\n",
+                "2-Ver desinos transporte aereo.\n",
+                "3-Ver destinos transporte terrestre.\n",
+                "4-Salir al menu principal.\n")
+            op3= int(input("Escribe un número y pulsa enter: "))
+         
         
-        op3= int(input("Escribe un número y pulsa enter: "))
-
-        while op3 != 0:
-
             if op3 == 1:
 
-                print("Los colaboradores actuales son los siguientes")
-                print(ListaClientes)
-                return menu3()
+             print("Los colaboradores actuales son los siguientes")
+             print(ListaClientes)
+             return menu3()
                 
             elif op3== 2:
 
-                print("in progress")
-                return menu3()
+             print("in progress")
+             return menu3()
               
                 
             elif op3== 3:
 
-                print("in progress")
-                return menu3()
+             print("in progress")
+             return menu3()
                 
 
             elif op3== 4:
-                print("Volviendo al menu principal")
-                return menu()
-        
+             print("Volviendo al menu principal")
+            return menu()
+        menu3()
 
     elif opcion == "4":
         
@@ -188,105 +179,74 @@ def menu():
         def menu4():
 
             print("Elige una opción:\n\n",
-            "1-Ver .\n",
-            "2-Ver .\n",
-            "3-Ver .\n",
-            "4-Salir al menu principal.\n")
-
-        menu4()
+                 "1-Ver .\n",
+                 "2-Ver .\n",
+                 "3-Ver .\n",
+                 "4-Salir al menu principal.\n")
+            op4= int(input("Escribe un número y pulsa enter: "))
+       
         
-        op4= int(input("Escribe un número y pulsa enter: "))
-
-        while op4 != 0:
-
             if op4 == 1:
 
-                print("in progress")
-                print(ListaClientes)
-                return menu()
+             print("in progress")
+             print(ListaClientes)
+             
 
             elif op4== 2:
 
-                print("in progress")
-                return menu()
+             print("in progress")
+             
 
             elif op4== 3:
 
-                print("in progress")
-                return menu()
+             print("in progress")
+             
 
             elif op4== 4:
-                print("Volviendo al menu principal")
-                return menu()
 
+             print("Volviendo al menu principal")
+             return menu()
+        menu4()
     elif opcion == "5":
         
         print("Modulo de Ventas")
-        time.sleep(2)
+        
 
         def menu5():
 
             print("Elige una opción:\n\n",
-            "1-Ingresar Ventas.\n",
-            "2-Consultar Ventas.\n",
-            "3-Ver lista de ventas.\n",
-            "4-Salir al menu principal.\n")
-
-        menu5()
+                "1-Ingresar Ventas.\n",
+                "2-Consultar Ventas.\n",
+                "3-Ver lista de ventas.\n",
+                "4-Salir al menu principal.\n")
+            op5 = int(input("Escribe un número y pulsa enter: "))
         
-        op5 = int(input("Escribe un número y pulsa enter: "))
-
-        while op5 != 0:
-
+        
             if op5 == 1:
-                def menuventas():
+             
 
-                    print("Elige una opción para facturar:\n\n",
-                    "1-Destino.\n",
-                    "2-Vuelos.\n",
-                    "3-Viejaes en bus.\n",
-                    "4-Lugares de estadia.\n",
-                    "5-Salir al menu principal.\n")
-                menuventas()
-
-                opventa= int(input("Escribe un número y pulsa enter: "))
-                    
-                while opventa != 0:
-                    if opventa == 1:
-                      Destino= (input("Escribe el nombre del destino al que desea viajar y pulsa enter: "))
-                      print("El destino escogido es: ",Destino)
-                      return menu5()
-
-                    elif opventa== 2:
-                        print("")
-                    elif opventa== 3:
-                        print("hola")
-                    elif opventa== 4:
-                        print("hola")
-                    elif opventa== 5:
-                     print("Volviendo al menu")
-                     return menu5()
+             print("in progress")
+             
 
             elif op5 == 2:
 
-                print("in progress")
-                return menu5()
+              print("in progress")
+             
 
             elif op5 == 3:
 
-                print("in progress")
-                return menu5()
+             print("in progress")
+             
 
             elif op5 == 4:
-                print("Volviendo al menu principal")
-                return menu()
-    
+             print("Volviendo al menu principal")
+             return menu()
+        menu5()
     elif opcion == "6":
-        print("Finalizando Programa")
-        exit
+     print("Finalizando Programa")
+     exit
 
     else:
-        print("No has introducido una opción válida.\n")
-        return menu()
-
+     print("No has introducido una opción válida.\n")
+    return menu()
 menu()
