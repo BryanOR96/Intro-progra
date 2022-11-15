@@ -73,6 +73,7 @@ def menu():
                 NomEmpleado=input(" Digite el nombre del empleado al que desea modificar los datos: ")
                 if NomEmpleado in ListaEmpleados:
                     print("Los datos del empleado",NomEmpleado,"Son los siguientes:")
+                    
 
                 else:
                     print("El nombre digitado no se encuentra en la base de datos ")
@@ -98,7 +99,7 @@ def menu():
                 for valor_a, valor_b, valor_c, valor_d in zip(ListaEmpleados, ListaCedula, Salario, Puesto): 
 	                print("Empleado: ",valor_a, "Cedula de identidad :",valor_b, "con salario de ",valor_c, " colones por hora en el puesto de:",valor_d, "ha sido agregado con exito ")
                   
-                return menu1
+                menu1
             
             elif op1=="4":
                 print("Volviendo al menu principal")
